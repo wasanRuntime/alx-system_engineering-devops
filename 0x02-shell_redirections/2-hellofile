@@ -1,2 +1,2 @@
 #!/bin/bash
-ecat /etc/passwd
+cat /etc/passwd

@@ -39,8 +39,8 @@ listen 11620-lb-01
 	balance roundrobin
 	option httpclose
 	option forwardfor
-	server 11620-web-01 52.3.252.142:80 check
-        server 11620-web-02 18.207.139.15:80 check
+	server 307716-web-01 54.237.18.137:80 check
+        server 307716-web-02 54.144.142.224:80 check
    	option forwardfor
    	option http-server-close
 
@@ -59,8 +59,8 @@ frontend www-https
 
 backend www-backend
         redirect scheme https if !{ ssl_fc }
-        server 11620-web-01 52.3.252.142:80 check
-        server 11620-web-02 18.207.139.15:80 check
+	server 307716-web-01 54.237.18.137:80 check
+        server 307716-web-02 54.144.142.224:80 check
 
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:54321

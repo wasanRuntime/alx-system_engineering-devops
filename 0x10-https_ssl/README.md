@@ -23,4 +23,4 @@ Files that start with:
 
 ---
 ### Authors
-Robert Kamau Njonjo
+Andrew Simiyu

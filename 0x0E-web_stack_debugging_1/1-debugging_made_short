@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # debugging Nginx web server
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-service nginx restart
-pkill -f "nginx"
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
+#terminate the first nginx process ID
+kill "$(pgrep 'nginx' | head -1)"
 
